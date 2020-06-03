@@ -2,8 +2,8 @@ $(document).ready(function() {
   $("#btn").click(function(event) {
    event.preventDefault();
    
-    var firstNum = parseInt($("#input-1").val());
-    var secondNum = parseInt($("#input-2").val());
+    let firstNum = parseInt($("#input-1").val());
+    let secondNum = parseInt($("#input-2").val());
 
     console.log('firstNum: ', firstNum)
     console.log('secondNum: ', secondNum)
@@ -11,12 +11,11 @@ $(document).ready(function() {
     if (firstNum > secondNum) {
       alert("'Count to' MUST BE greater than 'Count by'");
       return;
-    } else 
-    if (!firstNum || !secondNum) {
+    } else if (!firstNum || !secondNum) {
       alert("Enter numbers");
       return;
     } else  {
-      for (var index = firstNum; index <= secondNum; index += firstNum) {
+      for (let index = firstNum; index <= secondNum; index += firstNum) {
         total = index;
         alert(total);
       }
